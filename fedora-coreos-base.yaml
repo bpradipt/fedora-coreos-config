@@ -103,11 +103,11 @@ postprocess:
   # Disable SSH password logins by default
   # Move to overlay once sshd_config fragments are supported
   # https://github.com/coreos/fedora-coreos-tracker/issues/138
-  - |
-    #!/usr/bin/env bash
-    set -xeuo pipefail
-    sed -Ei 's/^(PasswordAuthentication|PermitRootLogin)[[:blank:]]/#&/' /etc/ssh/sshd_config
-    echo -e '\n# Disable password logins by default\nPasswordAuthentication no\nPermitRootLogin prohibit-password' >> /etc/ssh/sshd_config
+  #- |
+  #  #!/usr/bin/env bash
+  #  set -xeuo pipefail
+  #  sed -Ei 's/^(PasswordAuthentication|PermitRootLogin)[[:blank:]]/#&/' /etc/ssh/sshd_config
+  #  echo -e '\n# Disable password logins by default\nPasswordAuthentication no\nPermitRootLogin prohibit-password' >> /etc/ssh/sshd_config
   # This will be dropped once FCOS is out of preview.
   # See also experimental.motd in overlay/.
   # https://github.com/coreos/fedora-coreos-tracker/issues/164
@@ -128,7 +128,8 @@ packages:
   - selinux-policy-targeted
   - polkit
   # System setup
-  - ignition
+  #- ignition
+  - ignition-0.31.0-6.gitf59a653.fc30
   - afterburn
   - dracut-network
   - passwd
@@ -173,3 +174,6 @@ packages:
   # i18n
   - kbd
   - whois-nls
+  # OpenShift
+  - cri-o cri-tools
+  - openshift-clients openshift-hyperkube

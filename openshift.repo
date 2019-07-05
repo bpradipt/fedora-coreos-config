@@ -1,0 +1,5 @@
+[openshift]
+name=Openshift Origin 4
+baseurl=http://power.openshift.repo/repo/openshift/$basearch
+enabled=1
+gpgcheck=0

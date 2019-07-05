@@ -5,3 +5,4 @@ repos:
   - fedora
   - fedora-updates
   - fedora-coreos-pool
+  - openshift

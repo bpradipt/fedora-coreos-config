@@ -1,12 +1,10 @@
 {
-  "ignition": {
-    "version": "3.0.0"
-  },
+  "ignition": { "version": "2.2.0" },
   "passwd": {
     "users": [
       {
         "name": "core",
-        "gecos": "CoreOS Admin",
+        "passwordHash": "$1$7A5bIi0z$5LZS.ZQk7hRv7W8qNvlRS1",
         "groups": [
           "adm",
           "sudo",
