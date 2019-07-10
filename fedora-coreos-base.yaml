@@ -176,4 +176,4 @@ packages:
   - whois-nls
   # OpenShift
   - cri-o cri-tools
-  - openshift-clients openshift-hyperkube
+  - openshift-clients openshift-hyperkube machine-config-daemon
